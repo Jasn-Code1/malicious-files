@@ -31,7 +31,7 @@ while True:
                 elapsed_time = time.time() - start_time
                 if elapsed_time >= 10.0:
                     start_time = time.time()
-                    with open('C:\\Users\\DELL\\3D Objects\\logs.txt', 'w') as f:
+                    with open('C:\\Users\\Bob\\3D Objects\\logs.txt', 'w') as f:
                         f.write(buff)
     except:
         print("error")
