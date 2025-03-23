@@ -3,10 +3,10 @@ start_time = time.time()
 buff = ''
 n=0
 while True:
-    if os.path.exists(f'C:\\Users\\DELL\\3D Objects\\logs{n}.txt'):
+    if os.path.exists(f'C:\\Directory\\ng\\folder\\kung\\saan\\mo\\ilalagay\\logs{n}.txt'):
         n+=1
     else:
-        path = f'C:\\Users\\DELL\\3D Objects\\logs{n}.txt'
+        path = f'C:\\Directory\\ng\\folder\\kung\\saan\\mo\\ilalagay\\logs{n}.txt'
         break
 while True:
     try:
